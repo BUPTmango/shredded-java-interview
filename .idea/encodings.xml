@@ -14,5 +14,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/LazyMan.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/LazyManThreadSafe.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/StaticInnerClass.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sort/HeapSort.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sort/MergeSort.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sort/QuickSort.java" charset="GBK" />
   </component>
 </project>
