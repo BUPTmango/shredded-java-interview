@@ -1,6 +1,8 @@
 package deadlock;
 
 /**
+ * 死锁 demo 可以通过 jps + jstack 的方式查看
+ *
  * @author Wang Guolong
  * @version 1.0
  * @date 2021/2/3 9:00 下午
