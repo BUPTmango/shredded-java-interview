@@ -6,6 +6,7 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * 利用ArrayBlockingQueue编写生产者消费者的demo
+ *
  * @author Wang Guolong
  * @version 1.0
  * @date 2021/2/4 9:43 上午
