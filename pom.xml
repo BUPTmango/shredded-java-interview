@@ -13,7 +13,7 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-<!--    cglib代理-->
+<!--        cglib代理-->
     <dependencies>
         <dependency>
             <groupId>cglib</groupId>
@@ -26,11 +26,17 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
-<!--    netty框架-->
+<!--        netty框架-->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.50.Final</version>
+        </dependency>
+<!--        mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
         </dependency>
     </dependencies>
 
