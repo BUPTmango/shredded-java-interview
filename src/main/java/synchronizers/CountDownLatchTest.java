@@ -1,4 +1,4 @@
-package concurrenttool;
+package synchronizers;
 
 import java.util.concurrent.*;
 

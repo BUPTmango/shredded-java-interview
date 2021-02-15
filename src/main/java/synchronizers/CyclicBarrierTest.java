@@ -1,4 +1,4 @@
-package concurrenttool;
+package synchronizers;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
