@@ -52,22 +52,21 @@ public class CountDownLatchTest {
         int cpus = Runtime.getRuntime().availableProcessors() + 1;
         CountDownLatch countDownLatch = new CountDownLatch(cpus);
         ExecutorService executorService = Executors.newFixedThreadPool(cpus);
-        int bound = 100000000;
+        int bound = 10000000;
         int start = 1, end = 1, step = bound / cpus;
         int count = 0;
         long multiStart = System.currentTimeMillis();
-        BlockingQueue<Future<Integer>> queue = new ArrayBlockingQueue<>(cpus);
+        // 用CompletionService包装 方便通过take从blockingQueue中取
+        CompletionService<Integer> service = new ExecutorCompletionService<>(executorService);
         for (int i = 0; i < cpus; i++) {
             end = Math.min(bound, start + step);
-            Future<Integer> future = executorService.submit(new Worker(countDownLatch, start, end - 1));
-            // 把future放到blocking中，之后下一个线程进行计算
-            queue.add(future);
+            service.submit(new Worker(countDownLatch, start, end - 1));
             start = end + 1;
         }
         countDownLatch.await();
-        // 从阻塞队列中取值
-        while (!queue.isEmpty()) {
-            count += queue.take().get();
+        // 取值
+        for (int i = 0; i < cpus; i++) {
+            count += service.take().get();
         }
         System.out.println("multi : " + count);
         long multiEnd = System.currentTimeMillis();
