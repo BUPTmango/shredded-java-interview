@@ -20,8 +20,8 @@ public class QuickSort {
             return;
         }
         int p = partition(nums, start, end);
-        sort(nums, start, end - 1);
-        sort(nums, start + 1, end);
+        sort(nums, start, p - 1);
+        sort(nums, p + 1, end);
     }
 
     private int partition(int[] nums, int left, int right) {
