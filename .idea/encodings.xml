@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/proxy/staticproxy/UserDao.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/proxy/staticproxy/UserDaoProxy.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/rate_limit/GuavaRateLimiterTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rate_limit/SemaphoreTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/rate_limit/TokenBucket.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/DoubleCheckedLocking.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/Enum.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/singleton/HungryMan.java" charset="GBK" />
