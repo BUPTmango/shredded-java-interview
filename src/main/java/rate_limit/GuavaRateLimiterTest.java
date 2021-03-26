@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.RateLimiter;
 
 /**
  * 使用Guava的RateLimiter实现限流
+ * 其内部使用令牌桶算法实现
  *
  * @author Wang Guolong
  * @version 1.0
