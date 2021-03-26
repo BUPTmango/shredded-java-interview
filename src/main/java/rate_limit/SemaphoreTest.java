@@ -5,24 +5,25 @@ import java.util.TimerTask;
 import java.util.concurrent.Semaphore;
 
 /**
- * ä½¿ç”¨ä¿¡å·é‡å®ç°é™æµ
- * æ³¨æ„ä»¥å›ºå®šçš„æ—¶é—´é¢‘ç‡é‡Šæ”¾ä¿¡å·é‡
+ * Ê¹ÓÃĞÅºÅÁ¿ÊµÏÖÏŞÁ÷
+ * ×¢ÒâÒÔ¹Ì¶¨µÄÊ±¼äÆµÂÊÊÍ·ÅĞÅºÅÁ¿
  *
  * @author Wang Guolong
  * @version 1.0
- * @date 2021/3/27 7:29 ä¸Šåˆ
+ * @date 2021/3/27 7:29 ÉÏÎç
  */
 public class SemaphoreTest {
     private static Semaphore semaphore = new Semaphore(10);
 
     public static void bizMethod() throws InterruptedException {
         if (!semaphore.tryAcquire()) {
-            System.out.println(Thread.currentThread().getName() + "è¢«æ‹’ç»");
+            System.out.println(Thread.currentThread().getName() + "±»¾Ü¾ø");
             return;
         }
 
-        System.out.println(Thread.currentThread().getName() + "æ‰§è¡Œä¸šåŠ¡é€»è¾‘");
-        Thread.sleep(500);//æ¨¡æ‹Ÿå¤„ç†ä¸šåŠ¡é€»è¾‘éœ€è¦1ç§’
+        System.out.println(Thread.currentThread().getName() + "Ö´ĞĞÒµÎñÂß¼­");
+        // Ä£Äâ´¦ÀíÒµÎñÂß¼­ĞèÒª1Ãë
+        Thread.sleep(500);
         semaphore.release();
     }
 
@@ -33,13 +34,14 @@ public class SemaphoreTest {
             @Override
             public void run() {
                 semaphore.release(10);
-                System.out.println("é‡Šæ”¾æ‰€æœ‰é”");
+                System.out.println("ÊÍ·ÅËùÓĞËø");
             }
         }, 1000, 1000);
 
         for (int i = 0; i < 10000; i++) {
             try {
-                Thread.sleep(10);//æ¨¡æ‹Ÿæ¯éš”10mså°±æœ‰1ä¸ªè¯·æ±‚è¿›æ¥
+                // Ä£ÄâÃ¿¸ô10ms¾ÍÓĞ1¸öÇëÇó½øÀ´
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
