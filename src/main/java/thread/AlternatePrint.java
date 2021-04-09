@@ -26,7 +26,10 @@ public class AlternatePrint {
                     System.out.print(c);
                     lock.notify();
                     try {
-                        lock.wait();
+                        // 如果是最后一个字符，就不会进入wait状态
+                        if (c != chars[chars.length - 1]) {
+                            lock.wait();
+                        }
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -47,7 +50,5 @@ public class AlternatePrint {
 
         characterThread.start();
         numberThread.start();
-
-        Thread.sleep(5000);
     }
 }
