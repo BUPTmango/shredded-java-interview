@@ -16,6 +16,7 @@ public class QuickSort {
     }
 
     private void sort(int[] nums, int start, int end) {
+        // 注意要写退出条件
         if (start >= end) {
             return;
         }
