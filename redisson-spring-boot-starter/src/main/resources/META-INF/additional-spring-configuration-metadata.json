@@ -1,0 +1,15 @@
+{
+  "properties": [
+    {
+      "name": "autu.redissin.host",
+      "type": "java.lang.String",
+      "description": "redis服务器地址.",
+      "defaultValue": "localhost"
+    },{
+      "name": "autu.redisson.port",
+      "type": "java.lang.Integer",
+      "description": "redis服务器端口.",
+      "defaultValue": 6379
+    }
+  ]
+}
