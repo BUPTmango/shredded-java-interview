@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @version 1.0
  * @date 2021/4/28 22:13
  */
-@ConfigurationProperties(prefix = "auto.redisson")
+@ConfigurationProperties(prefix = "autu.redisson")
 public class RedissonProperties {
 
     /** Redis server host */

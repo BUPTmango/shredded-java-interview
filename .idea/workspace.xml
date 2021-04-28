@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/redisson-spring-boot-starter/src/main/java/com/wgl/redisson/RedissonAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redisson-spring-boot-starter/src/main/java/com/wgl/redisson/RedissonProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redisson-spring-boot-starter/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redisson-spring-boot-starter/src/main/resources/META-INF/spring.factories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,14 +263,7 @@
       <workItem from="1619315652934" duration="792000" />
       <workItem from="1619611494309" duration="1097000" />
       <workItem from="1619617588561" duration="352000" />
-      <workItem from="1619618256911" duration="1191000" />
-    </task>
-    <task id="LOCAL-00013" summary="feat: 手撕 Java 静态代理">
-      <created>1611826304856</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1611826304856</updated>
+      <workItem from="1619618256911" duration="2018000" />
     </task>
     <task id="LOCAL-00014" summary="feat: 手撕 cglib 动态代理">
       <created>1611826332243</created>
@@ -612,14 +601,20 @@
       <option name="project" value="LOCAL" />
       <updated>1619618311301</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="feat: 手撕 spring-boot-starter">
+      <created>1619620675250</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1619620675250</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 测试synchronized锁升级过程中对象头锁标志位的变化" />
     <MESSAGE value="feat: 手撕同步器demo" />
     <MESSAGE value="feat: 手撕两个线程交替打印" />
     <MESSAGE value="feat: 测试编程题中的输入输出" />
@@ -644,7 +639,8 @@
     <MESSAGE value="添加jedis依赖" />
     <MESSAGE value="feat: 手撕 Redis实现分布式锁" />
     <MESSAGE value="delete .idea folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete .idea folder" />
+    <MESSAGE value="feat: 手撕 spring-boot-starter" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 手撕 spring-boot-starter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
