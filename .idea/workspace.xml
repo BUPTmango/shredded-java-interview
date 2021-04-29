@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="修改gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/thread/TestPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/datastructure/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datastructure/BloomFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,28 +278,7 @@
       <workItem from="1619667049710" duration="1000" />
       <workItem from="1619667072928" duration="752000" />
       <workItem from="1619686184426" duration="75000" />
-      <workItem from="1619686282366" duration="3650000" />
-    </task>
-    <task id="LOCAL-00017" summary="feat: 手撕 Java LRU LFU 缓存算法">
-      <created>1612248734921</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1612248734921</updated>
-    </task>
-    <task id="LOCAL-00018" summary="feat: 手撕 Java 死锁 demo">
-      <created>1612399450132</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1612399450132</updated>
-    </task>
-    <task id="LOCAL-00019" summary="feat: 手撕 Java 死锁 demo">
-      <created>1612399632066</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1612399632066</updated>
+      <workItem from="1619686282366" duration="4001000" />
     </task>
     <task id="LOCAL-00020" summary="feat: ArrayBlockingQueue编写生产者消费者demo">
       <created>1612404195156</created>
@@ -625,16 +602,34 @@
       <option name="project" value="LOCAL" />
       <updated>1619684018190</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="修改相关文件编码">
+      <created>1619692575306</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1619692575306</updated>
+    </task>
+    <task id="LOCAL-00067" summary="classes">
+      <created>1619692589741</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1619692589741</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat: 手撕 简易线程池">
+      <created>1619692607186</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1619692607186</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 测试编程题中的输入输出" />
-    <MESSAGE value="feat: 手撕 快速排序" />
-    <MESSAGE value="feat: 模拟并发测试接口或者方法" />
     <MESSAGE value="feat: 三个线程循环打印 ABC 10次" />
     <MESSAGE value="feat: 添加Guava依赖" />
     <MESSAGE value="feat: 使用Guava的RateLimiter实现限流" />
@@ -657,7 +652,10 @@
     <MESSAGE value="feat: 手撕 spring-boot-starter" />
     <MESSAGE value="feat: 手撕 用数组实现循环队列" />
     <MESSAGE value="修改gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改gitignore" />
+    <MESSAGE value="修改相关文件编码" />
+    <MESSAGE value="classes" />
+    <MESSAGE value="feat: 手撕 简易线程池" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 手撕 简易线程池" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
