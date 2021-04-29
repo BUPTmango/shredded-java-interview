@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/MyCircularQueue.java" afterDir="false" />
+    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="修改gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/thread/TestPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datastructure/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datastructure/BloomFilter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <recent name="node" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RedissonSpringBootStarterApplication">
+  <component name="RunManager" selected="Application.TestPool">
     <configuration name="BloomFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructure.BloomFilter" />
       <module name="shredded-java-interview" />
@@ -126,6 +128,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.TestPool" />
+      <module name="shredded-java-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cache.TestThread" />
       <module name="shredded-java-interview" />
@@ -135,13 +150,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TopK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TopK" />
-      <module name="shredded-java-interview" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestPool" />
         <item itemvalue="Application.BloomFilter" />
         <item itemvalue="Application.SnowFlake" />
         <item itemvalue="Application.TestThread" />
         <item itemvalue="Application.Round" />
-        <item itemvalue="Application.TopK" />
       </list>
     </recent_temporary>
   </component>
@@ -270,21 +278,9 @@
       <workItem from="1619617588561" duration="352000" />
       <workItem from="1619618256911" duration="2473000" />
       <workItem from="1619667049710" duration="1000" />
-      <workItem from="1619667072928" duration="463000" />
-    </task>
-    <task id="LOCAL-00015" summary="feat: 手撕 jdk 动态代理">
-      <created>1611826344925</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1611826344925</updated>
-    </task>
-    <task id="LOCAL-00016" summary="class">
-      <created>1611826426340</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1611826426340</updated>
+      <workItem from="1619667072928" duration="752000" />
+      <workItem from="1619686184426" duration="75000" />
+      <workItem from="1619686282366" duration="3650000" />
     </task>
     <task id="LOCAL-00017" summary="feat: 手撕 Java LRU LFU 缓存算法">
       <created>1612248734921</created>
@@ -615,15 +611,27 @@
       <option name="project" value="LOCAL" />
       <updated>1619621757863</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="feat: 手撕 用数组实现循环队列">
+      <created>1619683922474</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1619683922475</updated>
+    </task>
+    <task id="LOCAL-00065" summary="修改gitignore">
+      <created>1619684018190</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1619684018190</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 手撕同步器demo" />
-    <MESSAGE value="feat: 手撕两个线程交替打印" />
     <MESSAGE value="feat: 测试编程题中的输入输出" />
     <MESSAGE value="feat: 手撕 快速排序" />
     <MESSAGE value="feat: 模拟并发测试接口或者方法" />
@@ -647,7 +655,9 @@
     <MESSAGE value="feat: 手撕 Redis实现分布式锁" />
     <MESSAGE value="delete .idea folder" />
     <MESSAGE value="feat: 手撕 spring-boot-starter" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 手撕 spring-boot-starter" />
+    <MESSAGE value="feat: 手撕 用数组实现循环队列" />
+    <MESSAGE value="修改gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
