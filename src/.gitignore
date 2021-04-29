@@ -26,7 +26,7 @@ Thumbs.db
 *.orig
 
 # idea ignore
-.idea/
+.idea/*
 *.ipr
 *.iws
 .mymetadata
@@ -43,8 +43,7 @@ Thumbs.db
 /target/*
 /src/main/webapp/WEB-INF/classes/*
 /src/main/webapp/userfiles/*
-/target/
-../.idea/*
+/target/*
 # *.properties
 # pom.xml
 # mybaties-*.xml
