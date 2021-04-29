@@ -44,6 +44,7 @@ Thumbs.db
 /src/main/webapp/WEB-INF/classes/*
 /src/main/webapp/userfiles/*
 /target/
+../.idea/*
 # *.properties
 # pom.xml
 # mybaties-*.xml
