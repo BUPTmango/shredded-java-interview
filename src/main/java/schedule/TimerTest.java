@@ -15,7 +15,9 @@ import java.util.TimerTask;
 @Slf4j
 public class TimerTest {
     public static void main(String[] args) {
+        // timer 定义频率和延迟
         Timer timer = new Timer();
+        // timerTask 定义具体的执行任务
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
