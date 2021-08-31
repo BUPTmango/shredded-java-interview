@@ -46,7 +46,6 @@ public class QuickSort {
         while (!stack.isEmpty()) {
             // 弹出左指针
             i = stack.pop();
-            /////////
             // 弹出右指针
             j = stack.pop();
             if (i < j) {
