@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/thread/MyThreadPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/TestPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sort/QuickSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sort/QuickSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/TestPool$Worker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/TestPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/MyThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/MyThreadPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,13 +292,6 @@
       <workItem from="1629456824477" duration="179000" />
       <workItem from="1629702120783" duration="944000" />
       <workItem from="1629727558890" duration="332000" />
-    </task>
-    <task id="LOCAL-00028" summary="添加MySQL驱动">
-      <created>1612770267301</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1612770267302</updated>
     </task>
     <task id="LOCAL-00029" summary="feat: 手撕 原生JDBC">
       <created>1612770295858</created>
@@ -642,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630391899296</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="feat: 优化自定义线程池">
+      <created>1630403938497</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1630403938497</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,7 +655,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 修改部分文件编码" />
     <MESSAGE value="feat: 自己实现一个ConcurrentHashSet" />
     <MESSAGE value="feat: 手撕快速排序" />
     <MESSAGE value="feat: 优化两个线程交替打印" />
@@ -686,7 +679,8 @@
     <MESSAGE value="feat: 手撕 Timer调度器" />
     <MESSAGE value="feat: 手撕 jvm fast throw" />
     <MESSAGE value="feat: 新增非递归快排" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 新增非递归快排" />
+    <MESSAGE value="feat: 优化自定义线程池" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 优化自定义线程池" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -20,12 +20,12 @@ public class MyThreadPool {
      */
     private volatile int coreSize, maxSize;
 
-    private long keepAliveTime;
+    private final long keepAliveTime;
 
     /**
      * 阻塞队列
      */
-    private BlockingQueue<Runnable> queue;
+    private final BlockingQueue<Runnable> queue;
     /**
      * 保存创建的worker集合，方便之后shutdown
      */
@@ -109,7 +109,7 @@ public class MyThreadPool {
 
     private class Worker extends Thread {
 
-        private Runnable firstTask;
+        private final Runnable firstTask;
 
         public Worker(Runnable task) {
             this.firstTask = task;
@@ -130,8 +130,8 @@ public class MyThreadPool {
                         System.out.println("运行结束,当前线程数：" + getPoolSize());
                         continue;
                     }
-                    synchronized (workers){
-                        if (getPoolSize() > coreSize && allowCoreThreadTimeOut){
+                    synchronized (workers) {
+                        if (getPoolSize() > coreSize && allowCoreThreadTimeOut) {
                             workers.remove(this);
                             break;
                         }
@@ -154,7 +154,8 @@ public class MyThreadPool {
             pool.execute(() -> {
                 System.out.println("完成:" + j);
                 int index = 0;
-                while (index++ < 1000) {}
+                while (index++ < 1000) {
+                }
             });
         }
         pool.shutdown();
