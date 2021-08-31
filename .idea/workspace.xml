@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sort/QuickSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sort/QuickSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/TicketSell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/thread/TicketSell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/thread/Worker.class" afterDir="false" />
-    </list>
+    <list default="true" id="3b850a0d-83a1-4aa4-b169-168aad87a0eb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,13 +288,6 @@
       <workItem from="1629456824477" duration="179000" />
       <workItem from="1629702120783" duration="944000" />
       <workItem from="1629727558890" duration="332000" />
-    </task>
-    <task id="LOCAL-00025" summary="feat: 手撕 Java并发工具包 demo">
-      <created>1612429838188</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1612429838188</updated>
     </task>
     <task id="LOCAL-00026" summary="feat: 手撕 Java并发工具包 demo">
       <created>1612429874250</created>
@@ -638,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622642429603</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="feat: 新增非递归快排">
+      <created>1630389810662</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1630389810662</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +651,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 实现限流中的令牌桶算法" />
     <MESSAGE value="feat: 修改部分文件编码" />
     <MESSAGE value="feat: 自己实现一个ConcurrentHashSet" />
     <MESSAGE value="feat: 手撕快速排序" />
@@ -682,7 +675,8 @@
     <MESSAGE value="class" />
     <MESSAGE value="feat: 手撕 Timer调度器" />
     <MESSAGE value="feat: 手撕 jvm fast throw" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 手撕 jvm fast throw" />
+    <MESSAGE value="feat: 新增非递归快排" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 新增非递归快排" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
