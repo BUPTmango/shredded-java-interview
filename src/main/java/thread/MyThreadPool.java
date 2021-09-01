@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ÊÖĞ´¼òÒ×Ïß³Ì³Ø
+ * æ‰‹å†™ç®€æ˜“çº¿ç¨‹æ± 
  *
  * @author Wang Guolong
  * @version 1.0
@@ -15,24 +15,24 @@ import java.util.concurrent.TimeUnit;
 public class MyThreadPool {
 
     /**
-     * ºËĞÄÏß³ÌÊı ºÍ ×î´óÏß³ÌÊı
-     * ×¢ÒâÌí¼Óvolatile±£Ö¤¿É¼ûĞĞ
+     * æ ¸å¿ƒçº¿ç¨‹æ•° å’Œ æœ€å¤§çº¿ç¨‹æ•°
+     * æ³¨æ„æ·»åŠ volatileä¿è¯å¯è§è¡Œ
      */
     private volatile int coreSize, maxSize;
 
     private final long keepAliveTime;
 
     /**
-     * ×èÈû¶ÓÁĞ
+     * é˜»å¡é˜Ÿåˆ—
      */
     private final BlockingQueue<Runnable> queue;
     /**
-     * ±£´æ´´½¨µÄworker¼¯ºÏ£¬·½±ãÖ®ºóshutdown
+     * ä¿å­˜åˆ›å»ºçš„workeré›†åˆï¼Œæ–¹ä¾¿ä¹‹åshutdown
      */
     private final HashSet<Worker> workers = new HashSet<>();
 
     /**
-     * ÊÇ·ñ³¬Ê±
+     * æ˜¯å¦è¶…æ—¶
      */
     private volatile boolean allowCoreThreadTimeOut;
 
@@ -52,27 +52,25 @@ public class MyThreadPool {
     }
 
     public void execute(Runnable runnable) {
-        synchronized (workers) {
-            if (getPoolSize() < coreSize) {
+        if (getPoolSize() < coreSize) {
+            if (!addWorker(runnable)) {
+                reject();
+            }
+        } else {
+            System.out.println("å½“å‰é˜Ÿåˆ—å¤§å°ï¼š" + queue.size());
+            // æ·»åŠ ä»»åŠ¡åˆ°é˜Ÿåˆ—ä¸­
+            if (!queue.offer(runnable)) {
+                // å¦‚æœæ·»åŠ å¤±è´¥åˆ™ç»§ç»­åˆ›å»ºçº¿ç¨‹
+                System.out.println("offer å¤±è´¥,å½“å‰çº¿ç¨‹æ•°ï¼š" + getPoolSize());
                 if (!addWorker(runnable)) {
                     reject();
-                }
-            } else {
-                System.out.println("µ±Ç°¶ÓÁĞ´óĞ¡£º" + queue.size());
-                // Ìí¼ÓÈÎÎñµ½¶ÓÁĞÖĞ
-                if (!queue.offer(runnable)) {
-                    // Èç¹ûÌí¼ÓÊ§°ÜÔò¼ÌĞø´´½¨Ïß³Ì
-                    System.out.println("offer Ê§°Ü,µ±Ç°Ïß³ÌÊı£º" + getPoolSize());
-                    if (!addWorker(runnable)) {
-                        reject();
-                    }
                 }
             }
         }
     }
 
     /**
-     * µÈÏß³Ì³ØÖĞËùÓĞÈÎÎñ¶¼Ö´ĞĞÍê³É²Å¹Ø±ÕÏß³Ì³Ø
+     * ç­‰çº¿ç¨‹æ± ä¸­æ‰€æœ‰ä»»åŠ¡éƒ½æ‰§è¡Œå®Œæˆæ‰å…³é—­çº¿ç¨‹æ± 
      */
     public void shutdown() {
         while (!queue.isEmpty()) {
@@ -84,7 +82,7 @@ public class MyThreadPool {
     }
 
     /**
-     * Ö±½Ó¹Ø±Õ
+     * ç›´æ¥å…³é—­
      */
     public void shutDownNow() {
         queue.clear();
@@ -92,18 +90,20 @@ public class MyThreadPool {
     }
 
     private void reject() {
-        throw new RuntimeException("³¬³ö´óĞ¡,µ±Ç°Ïß³ÌÊı£º" + getPoolSize() + " ¶ÓÁĞ´óĞ¡£º" + queue.size());
+        throw new RuntimeException("è¶…å‡ºå¤§å°,å½“å‰çº¿ç¨‹æ•°ï¼š" + getPoolSize() + " é˜Ÿåˆ—å¤§å°ï¼š" + queue.size());
     }
 
     private boolean addWorker(Runnable runnable) {
-        // Èç¹ûµ±Ç°Ïß³ÌÊı´óÓÚ×î´óÊıÔò´´½¨Ê§°Ü
-        if (getPoolSize() >= maxSize) {
-            return false;
+        synchronized (workers) {
+            // å¦‚æœå½“å‰çº¿ç¨‹æ•°å¤§äºæœ€å¤§æ•°åˆ™åˆ›å»ºå¤±è´¥
+            if (getPoolSize() >= maxSize) {
+                return false;
+            }
+            Worker worker = new Worker(runnable);
+            worker.start();
+            workers.add(worker);
+            return true;
         }
-        Worker worker = new Worker(runnable);
-        worker.start();
-        workers.add(worker);
-        return true;
     }
 
 
@@ -124,10 +124,10 @@ public class MyThreadPool {
                 while (true) {
                     boolean timed = getPoolSize() > coreSize && allowCoreThreadTimeOut;
                     Runnable task = timed ? queue.poll(keepAliveTime, TimeUnit.SECONDS) : queue.take();
-                    // ÔËĞĞÏß³Ì
+                    // è¿è¡Œçº¿ç¨‹
                     if (task != null) {
                         task.run();
-                        System.out.println("ÔËĞĞ½áÊø,µ±Ç°Ïß³ÌÊı£º" + getPoolSize());
+                        System.out.println("è¿è¡Œç»“æŸ,å½“å‰çº¿ç¨‹æ•°ï¼š" + getPoolSize());
                         continue;
                     }
                     synchronized (workers) {
@@ -140,22 +140,20 @@ public class MyThreadPool {
             } catch (InterruptedException e) {
                 System.out.println("take....InterruptedException");
             } finally {
-                System.out.println("½áÊøÏß³Ì£¬µ±Ç°Ïß³ÌÊı£º" + getPoolSize());
+                System.out.println("ç»“æŸçº¿ç¨‹ï¼Œå½“å‰çº¿ç¨‹æ•°ï¼š" + getPoolSize());
             }
         }
     }
 
     public static void main(String[] args) {
         Thread.currentThread().setName("main");
-        MyThreadPool pool = new MyThreadPool(2, 5, new ArrayBlockingQueue<>(10), 1, TimeUnit.SECONDS);
-        for (int i = 0; i < 100; i++) {
+        MyThreadPool pool = new MyThreadPool(2, 5, new ArrayBlockingQueue<>(1000), 1, TimeUnit.SECONDS);
+        for (int i = 0; i < 10000; i++) {
             final int j = i;
             System.out.println("i=" + i + " " + Thread.currentThread().getName());
             pool.execute(() -> {
-                System.out.println("Íê³É:" + j);
+                System.out.println("å®Œæˆ:" + j);
                 int index = 0;
-                while (index++ < 1000) {
-                }
             });
         }
         pool.shutdown();
