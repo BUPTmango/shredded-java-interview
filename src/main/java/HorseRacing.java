@@ -25,8 +25,8 @@ public class HorseRacing {
         } else {
             // 每组第一赛一次
             result++;
-            // 剩下需要赛的马的数量
         }
+        // 剩下需要赛的马的数量
         int remain = (1 + k - 1) * (k - 1) / 2 + k - 1;
         // 如果剩下的一次赛不完
         if (remain > n) {
