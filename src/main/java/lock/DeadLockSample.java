@@ -1,4 +1,4 @@
-package lock.deadlock;
+package lock;
 
 /**
  * 死锁 demo 可以通过 jps + jstack 的方式查看

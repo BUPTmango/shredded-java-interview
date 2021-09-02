@@ -1,4 +1,4 @@
-package lock.synchro;
+package lock;
 
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
