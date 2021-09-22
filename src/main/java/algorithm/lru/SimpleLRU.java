@@ -1,5 +1,7 @@
 package algorithm.lru;
 
+import annotation.NotThreadSafe;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -10,6 +12,7 @@ import java.util.LinkedHashMap;
  * @version 1.0
  * @date 2021/9/22 22:09
  */
+@NotThreadSafe("LinkedHashMap不保证线程安全")
 public class SimpleLRU {
     private int cap;
     private LinkedHashMap<Integer, Integer> cache;
