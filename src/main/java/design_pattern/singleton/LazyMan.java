@@ -1,4 +1,4 @@
-package singleton;
+package design_pattern.singleton;
 
 
 import annotation.NotThreadSafe;
