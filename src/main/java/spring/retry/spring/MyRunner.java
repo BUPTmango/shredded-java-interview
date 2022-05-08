@@ -1,4 +1,4 @@
-package spring.retry;
+package spring.retry.spring;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;

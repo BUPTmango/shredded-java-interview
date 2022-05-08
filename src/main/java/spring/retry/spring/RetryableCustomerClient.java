@@ -1,4 +1,4 @@
-package spring.retry;
+package spring.retry.spring;
 
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;

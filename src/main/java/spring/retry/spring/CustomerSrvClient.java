@@ -1,4 +1,4 @@
-package spring.retry;
+package spring.retry.spring;
 
 import org.springframework.stereotype.Service;
 
